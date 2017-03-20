@@ -7,8 +7,8 @@ import { Api_Module } from './api/Api_Module'
 let app: express.Application = express();
 let api: Api_Module = new Api_Module(app);
 
-//let mongoose = require('mongoose');
-//mongoose.connect(Commons_Config.current.mongoConnectionString);
+let mongoose = require('mongoose');
+mongoose.connect(Commons_Config.current.mongoConnectionString);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
