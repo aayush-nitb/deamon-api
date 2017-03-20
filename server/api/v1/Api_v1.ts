@@ -1,4 +1,5 @@
 import { RequestHandler, Router, Request, Response } from 'express'
+import { Commons_Config } from '../../commons/Commons_Config'
 
 export class Api_v1 {
     static serve(router: Router) {
@@ -12,6 +13,7 @@ export class Api_v1 {
     get(req: Request, res: Response) {
         res.json({
             title: 'OK',
+            environment: Commons_Config.env,
             message: 'Hello World'
         });
     }
