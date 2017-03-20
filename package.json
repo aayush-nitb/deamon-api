@@ -4,7 +4,7 @@
   "description": "Deamon API",
   "main": "main.js",
   "scripts": {
-    "start": "gulp && concurrently \"node ./dist/main.js\"",
+    "start": "node ./dist/main.js",
     "typings": "typings",
     "test": "gulp:test"
   },
