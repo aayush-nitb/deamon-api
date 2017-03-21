@@ -13,7 +13,6 @@ mongoose.connect(Commons_Config.current.mongoConnectionString);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 if (Commons_Config.env == 'development') api.allowCors();
-api.serve();
 api.handleError();
 
 let server = app.listen(Commons_Config.current.port, () => {

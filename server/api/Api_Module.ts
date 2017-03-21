@@ -6,12 +6,6 @@ export class Api_Module {
     constructor(private app: Application) {
         //noop
     }
-    serve() {
-        let api:Router = Router();
-        Api_v1.serve(api);
-        Api_v2.serve(api);
-        this.app.use('/api', api);
-    }
     allowCors() {
         this.app.use((req, res, next) => {
             res.header('Access-Control-Allow-Origin', '*');
